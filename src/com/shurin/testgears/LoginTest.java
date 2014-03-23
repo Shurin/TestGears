@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class LoginTest extends JDialog {
 
@@ -42,24 +43,29 @@ public class LoginTest extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JLabel lblUsername = new JLabel("Username");
-			lblUsername.setBounds(173, 71, 74, 24);
+			lblUsername.setBounds(115, 144, 74, 24);
 			contentPanel.add(lblUsername);
 		}
 		{
 			JLabel lblPassword = new JLabel("Password");
-			lblPassword.setBounds(173, 102, 74, 24);
+			lblPassword.setBounds(115, 175, 74, 24);
 			contentPanel.add(lblPassword);
 		}
 		
 		textField = new JTextField();
-		textField.setBounds(257, 73, 86, 20);
+		textField.setBounds(199, 146, 86, 20);
 		contentPanel.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(257, 104, 86, 20);
+		textField_1.setBounds(199, 177, 86, 20);
 		contentPanel.add(textField_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(LoginTest.class.getResource("/com/shurin/testgears/TestLogoIcon.jpg")));
+		lblNewLabel.setBounds(55, 11, 317, 131);
+		contentPanel.add(lblNewLabel);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBackground(SystemColor.activeCaption);
