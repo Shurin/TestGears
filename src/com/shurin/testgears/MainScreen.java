@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.JButton;
 
 public class MainScreen extends JFrame {
 
@@ -53,8 +54,12 @@ public class MainScreen extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("This is a test screen");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tekton Pro Cond", Font.PLAIN, 30));
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 25));
 		lblNewLabel_1.setBounds(86, 153, 263, 67);
 		contentPane.add(lblNewLabel_1);
+		
+		JButton btnNewButton = new JButton("Shiney Button");
+		btnNewButton.setBounds(152, 228, 132, 23);
+		contentPane.add(btnNewButton);
 	}
 }
