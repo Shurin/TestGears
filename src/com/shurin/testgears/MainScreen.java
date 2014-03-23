@@ -11,6 +11,8 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class MainScreen extends JFrame {
 
@@ -46,7 +48,13 @@ public class MainScreen extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(MainScreen.class.getResource("/com/shurin/testgears/TestLogoIcon.jpg")));
-		lblNewLabel.setBounds(88, 11, 317, 131);
+		lblNewLabel.setBounds(64, 11, 317, 131);
 		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("This is a test screen");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Tekton Pro Cond", Font.PLAIN, 30));
+		lblNewLabel_1.setBounds(86, 153, 263, 67);
+		contentPane.add(lblNewLabel_1);
 	}
 }
