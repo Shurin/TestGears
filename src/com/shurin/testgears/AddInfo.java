@@ -174,6 +174,7 @@ public class AddInfo extends JFrame {
 		JButton btnCancel = new JButton("Reset");
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				textFieldFirstName.setText("");
 			}
 		});
 		btnCancel.setFont(new Font("Eras Demi ITC", Font.PLAIN, 12));
@@ -185,14 +186,14 @@ public class AddInfo extends JFrame {
 		btnAccept.setBounds(596, 497, 89, 23);
 		btnAccept.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(null, "Your new entry has been added.", "New Entry", 1);
+				JOptionPane.showMessageDialog(null, "Entry made for Person C.I.N.: A726446819", "Sent for Review", 1);
 			}
 		});
 		contentPane.add(btnAccept);
 
 		txtJosm = new JTextField();
 		txtJosm.setHorizontalAlignment(SwingConstants.CENTER);
-		txtJosm.setText("JOSM0422198312345");
+		txtJosm.setText("A726446819");
 		txtJosm.setEditable(false);
 		txtJosm.setFont(new Font("Eras Demi ITC", Font.PLAIN, 12));
 		txtJosm.setBounds(530, 176, 155, 22);
@@ -204,11 +205,20 @@ public class AddInfo extends JFrame {
 
 		JMenu file = new JMenu("File");
 		file.setMnemonic('F');
-		JMenu help = new JMenu("Help");
-		help.setMnemonic('H');
+		JMenu help = new JMenu("Search");
+		help.setMnemonic('S');
 
 		bar.add(file);
 		bar.add(help);
+		
+		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
+		mntmSearchEntries.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				Search.main(null);
+			}
+		});
+		help.add(mntmSearchEntries);
 
 		JMenuItem login = new JMenuItem("Back to Login");
 		login.setMnemonic('L');
@@ -237,6 +247,24 @@ public class AddInfo extends JFrame {
 				ProductRegistration.main(null);
 			}
 		});
+		
+		JMenuItem mntmReviewNewPerson = new JMenuItem("Review New Person");
+		mntmReviewNewPerson.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setVisible(false);
+				Review1.main(null);
+			}
+		});
+		file.add(mntmReviewNewPerson);
 		file.add(mntmOpenProductregistration);
+		
+		JMenuItem mntmReviewNewProduct = new JMenuItem("Review New Product");
+		mntmReviewNewProduct.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				Review2.main(null);
+			}
+		});
+		file.add(mntmReviewNewProduct);
 	}
 }

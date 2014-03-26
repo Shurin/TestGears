@@ -16,6 +16,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import java.awt.Font;
 
 public class LoginTest extends JDialog {
 
@@ -50,11 +51,13 @@ public class LoginTest extends JDialog {
 		setLocationRelativeTo(null);
 		{
 			JLabel lblUsername = new JLabel("Username");
+			lblUsername.setFont(new Font("Tahoma", Font.BOLD, 11));
 			lblUsername.setBounds(115, 144, 74, 24);
 			contentPanel.add(lblUsername);
 		}
 		{
 			JLabel lblPassword = new JLabel("Password");
+			lblPassword.setFont(new Font("Tahoma", Font.BOLD, 11));
 			lblPassword.setBounds(115, 175, 74, 24);
 			contentPanel.add(lblPassword);
 		}
@@ -70,9 +73,8 @@ public class LoginTest extends JDialog {
 		contentPanel.add(textField_1);
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(LoginTest.class
-				.getResource("/com/shurin/testgears/TestLogoIcon.jpg")));
-		lblNewLabel.setBounds(55, 11, 317, 131);
+		lblNewLabel.setIcon(new ImageIcon(LoginTest.class.getResource("/com/shurin/testgears/new girs2.jpg")));
+		lblNewLabel.setBounds(91, 11, 231, 105);
 		contentPanel.add(lblNewLabel);
 		{
 			JPanel buttonPane = new JPanel();
@@ -80,7 +82,7 @@ public class LoginTest extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JButton okButton = new JButton("OK");
+				JButton okButton = new JButton("Login");
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				okButton.addActionListener(new ActionListener() {

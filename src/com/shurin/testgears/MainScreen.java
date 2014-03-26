@@ -62,11 +62,20 @@ public class MainScreen extends JFrame {
 
 		JMenu file = new JMenu("File");
 		file.setMnemonic('F');
-		JMenu help = new JMenu("Help");
-		help.setMnemonic('H');
+		JMenu help = new JMenu("Search");
+		help.setMnemonic('S');
 
 		bar.add(file);
 		bar.add(help);
+		
+		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
+		mntmSearchEntries.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				Search.main(null);
+			}
+		});
+		help.add(mntmSearchEntries);
 
 		JMenuItem login = new JMenuItem("Back to Login");
 		login.setMnemonic('L');
@@ -95,7 +104,25 @@ public class MainScreen extends JFrame {
 				ProductRegistration.main(null);
 			}
 		});
+		
+		JMenuItem mntmReviewNewPerson = new JMenuItem("Review New Person");
+		mntmReviewNewPerson.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setVisible(false);
+				Review1.main(null);
+			}
+		});
+		file.add(mntmReviewNewPerson);
 		file.add(mntmOpenProductregistration);
+		
+		JMenuItem mntmReviewNewProduct = new JMenuItem("Review New Product");
+		mntmReviewNewProduct.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				Review2.main(null);
+			}
+		});
+		file.add(mntmReviewNewProduct);
 
 		JLabel label = new JLabel("New label");
 		//contentPane.setViewportView(label);
