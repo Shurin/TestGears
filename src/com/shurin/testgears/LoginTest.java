@@ -84,6 +84,7 @@ public class LoginTest extends JDialog {
 		contentPanel.add(lblNewLabel);
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBorder(UIManager.getBorder("DesktopIcon.border"));
 			buttonPane.setBackground(SystemColor.activeCaption);
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);

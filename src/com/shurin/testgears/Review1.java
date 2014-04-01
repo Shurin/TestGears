@@ -17,6 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
 
 public class Review1 extends JFrame {
 
@@ -79,7 +81,9 @@ public class Review1 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBackground(SystemColor.activeCaption);
+		contentPane.setBorder(UIManager.getBorder("DesktopIcon.border"));
+		setUndecorated(true);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null);
@@ -331,6 +335,7 @@ public class Review1 extends JFrame {
 		contentPane.add(btnAccept);
 
 		JMenuBar bar = new JMenuBar();
+		bar.setBorder(UIManager.getBorder("DesktopIcon.border"));
 		setJMenuBar(bar);
 
 		JMenu file = new JMenu("File");

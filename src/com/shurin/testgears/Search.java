@@ -19,6 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
 
 public class Search extends JDialog {
 
@@ -50,7 +51,7 @@ public class Search extends JDialog {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.activeCaption);
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPanel.setBorder(UIManager.getBorder("DesktopIcon.border"));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		setLocationRelativeTo(null);
 		contentPanel.setLayout(null);
@@ -82,6 +83,7 @@ public class Search extends JDialog {
 		contentPanel.add(lblTypeDetails);
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBorder(UIManager.getBorder("DesktopIcon.border"));
 			buttonPane.setBackground(SystemColor.activeCaption);
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
