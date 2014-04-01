@@ -19,6 +19,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
 
 public class AddInfo extends JFrame {
 
@@ -55,7 +57,9 @@ public class AddInfo extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 850, 600);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBackground(SystemColor.activeCaption);
+		contentPane.setBorder(UIManager.getBorder("DesktopIcon.border"));
+		setUndecorated(true);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null);
@@ -118,12 +122,12 @@ public class AddInfo extends JFrame {
 
 		JLabel lblAddress = new JLabel("Address:");
 		lblAddress.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblAddress.setBounds(99, 243, 50, 14);
+		lblAddress.setBounds(99, 243, 72, 14);
 		contentPane.add(lblAddress);
 
 		JLabel lblPlaceOfBirth = new JLabel("Place of Birth:");
 		lblPlaceOfBirth.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblPlaceOfBirth.setBounds(99, 314, 78, 14);
+		lblPlaceOfBirth.setBounds(99, 314, 88, 14);
 		contentPane.add(lblPlaceOfBirth);
 
 		JLabel lblHairColor = new JLabel("Hair Color:");
@@ -201,6 +205,7 @@ public class AddInfo extends JFrame {
 		txtJosm.setColumns(10);
 
 		JMenuBar bar = new JMenuBar();
+		bar.setBorder(UIManager.getBorder("DesktopIcon.border"));
 		setJMenuBar(bar);
 
 		JMenu file = new JMenu("File");

@@ -17,10 +17,15 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
+import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 
 public class MainScreen extends JFrame implements KeyListener {
 
 	private JPanel contentPane;
+	private JTextField txtJdoe;
+	private JTextField textField;
+	private JTextField txtPersonProduct;
 
 	/**
 	 * Launch the application.
@@ -58,8 +63,52 @@ public class MainScreen extends JFrame implements KeyListener {
 		JLabel lblNewLabel = new JLabel("Welcome");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblNewLabel.setBounds(89, 97, 291, 135);
+		lblNewLabel.setBounds(129, 110, 238, 61);
 		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Username:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_1.setBounds(20, 166, 115, 29);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblAccessLevel = new JLabel("Access Level:");
+		lblAccessLevel.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblAccessLevel.setBounds(20, 195, 115, 29);
+		contentPane.add(lblAccessLevel);
+		
+		JLabel lblAccessType = new JLabel("Access Type:");
+		lblAccessType.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblAccessType.setBounds(20, 224, 115, 29);
+		contentPane.add(lblAccessType);
+		
+		txtJdoe = new JTextField();
+		txtJdoe.setEditable(false);
+		txtJdoe.setFont(new Font("Tahoma", Font.BOLD, 11));
+		txtJdoe.setText("JDoe224");
+		txtJdoe.setBounds(129, 172, 79, 20);
+		contentPane.add(txtJdoe);
+		txtJdoe.setColumns(10);
+		
+		textField = new JTextField();
+		textField.setText("01");
+		textField.setFont(new Font("Tahoma", Font.BOLD, 11));
+		textField.setEditable(false);
+		textField.setColumns(10);
+		textField.setBounds(129, 200, 27, 20);
+		contentPane.add(textField);
+		
+		txtPersonProduct = new JTextField();
+		txtPersonProduct.setText("Person & Product Registration");
+		txtPersonProduct.setFont(new Font("Tahoma", Font.BOLD, 11));
+		txtPersonProduct.setEditable(false);
+		txtPersonProduct.setColumns(10);
+		txtPersonProduct.setBounds(129, 230, 178, 20);
+		contentPane.add(txtPersonProduct);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon(MainScreen.class.getResource("/com/shurin/testgears/new girs2.jpg")));
+		label_1.setBounds(133, 11, 231, 105);
+		contentPane.add(label_1);
 		setLocationRelativeTo(null);
 
 		JMenuBar bar = new JMenuBar();

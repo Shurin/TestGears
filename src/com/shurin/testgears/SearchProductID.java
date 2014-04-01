@@ -7,11 +7,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
+
 import java.awt.SystemColor;
+
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class SearchProductID extends JFrame {
 
@@ -201,6 +209,16 @@ public class SearchProductID extends JFrame {
 		textField_13.setColumns(10);
 		textField_13.setBounds(375, 306, 116, 20);
 		contentPane.add(textField_13);
+		
+		JButton btnNewButton = new JButton("Back to Main");
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				MainScreen.main(null);
+			}
+		});
+		btnNewButton.setBounds(302, 355, 135, 23);
+		contentPane.add(btnNewButton);
 	}
-
 }
