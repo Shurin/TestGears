@@ -26,7 +26,7 @@ public class Search extends JDialog {
 	private JTextField textField;
 	JLabel lblTypeDetails, lblPickType;
 	JComboBox comboBox;
-	private static List<String> data = new ArrayList<String>();
+	public static List<String> data = new ArrayList<String>();
 
 	/**
 	 * Launch the application.
@@ -54,6 +54,7 @@ public class Search extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		setLocationRelativeTo(null);
 		contentPanel.setLayout(null);
+		setUndecorated(true);
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(Search.class.getResource("/com/shurin/testgears/new girs2.jpg")));
@@ -97,7 +98,13 @@ public class Search extends JDialog {
 									lblTypeDetails.setVisible(false);
 									textField.setVisible(false);
 									comboBox.setVisible(false);
-								} else JOptionPane.showMessageDialog(null, "Nothing Found.");
+									int results = 1;
+									JOptionPane.showMessageDialog(null, "Found (" + results + ") Result(s).");
+									String[] search = new String[1];
+									search[0] = textField.getText();
+									SearchResult.main(search);
+									dispose();
+								} else JOptionPane.showMessageDialog(null, "Found (0) Result(s).");
 							} else JOptionPane.showMessageDialog(null, "Your Details are empty.");
 						} else JOptionPane.showMessageDialog(null, "You did not pick a subject.");
 					}

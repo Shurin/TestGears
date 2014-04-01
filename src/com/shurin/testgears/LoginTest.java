@@ -17,6 +17,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.UIManager;
 
 public class LoginTest extends JDialog {
 
@@ -45,7 +50,8 @@ public class LoginTest extends JDialog {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.activeCaption);
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPanel.setBorder(UIManager.getBorder("DesktopIcon.border"));
+		setUndecorated(true);
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		setLocationRelativeTo(null);
@@ -105,6 +111,8 @@ public class LoginTest extends JDialog {
 				buttonPane.add(cancelButton);
 			}
 		}
-
+		
 	}
+	
 }
+

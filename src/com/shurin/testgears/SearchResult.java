@@ -26,9 +26,11 @@ public class SearchResult extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			SearchResult dialog = new SearchResult();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
+			if (args != null && args.length > 0) {
+				SearchResult dialog = new SearchResult(args[0]);
+				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				dialog.setVisible(true);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -37,13 +39,14 @@ public class SearchResult extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public SearchResult() {
+	public SearchResult(final String search) {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.activeCaption);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+		setLocationRelativeTo(null);
 		{
 			JLabel lblFoundResults = new JLabel("Found (1) Result(s):");
 			lblFoundResults.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -52,12 +55,27 @@ public class SearchResult extends JDialog {
 			contentPanel.add(lblFoundResults);
 		}
 		{
-			txtFbsbv = new JTextField();
-			txtFbsbv.setEditable(false);
-			txtFbsbv.setText("F5B1S42BV");
-			txtFbsbv.setBounds(10, 157, 86, 20);
-			contentPanel.add(txtFbsbv);
-			txtFbsbv.setColumns(10);
+			if (Search.data.contains(search)) {
+				int results = 1;
+				for (int i = 0; i < results; i++) {
+					JButton button = new JButton(search);
+					button.setBounds(10, 157 + (25 * i), 86, 20);
+					button.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent arg0) {
+							final String[] result = new String[1];
+							result[0] = search;
+							SearchProductID.main(result);
+						}
+					});
+					contentPanel.add(button);
+				}
+				txtFbsbv = new JTextField();
+				txtFbsbv.setEditable(false);
+				txtFbsbv.setText("F5B1S42BV");
+				txtFbsbv.setBounds(10, 157, 86, 20);
+				contentPanel.add(txtFbsbv);
+				txtFbsbv.setColumns(10);
+			}
 		}
 		{
 			JLabel lblNewLabel = new JLabel("");
