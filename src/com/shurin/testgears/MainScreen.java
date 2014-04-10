@@ -57,6 +57,7 @@ public class MainScreen extends JFrame {
 		setUndecorated(true);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setLocationRelativeTo(null);
 
 		JLabel lblNewLabel = new JLabel("Welcome");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);

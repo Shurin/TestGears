@@ -41,6 +41,7 @@ public class TestPage extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+		setLocationRelativeTo(null);
 		{
 			JLabel lblNothingToSee = new JLabel("Nothing to see here");
 			lblNothingToSee.setFont(new Font("Arial", Font.BOLD, 30));
