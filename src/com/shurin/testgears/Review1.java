@@ -77,6 +77,8 @@ public class Review1 extends JFrame {
 	 * Create the frame.
 	 */
 	public Review1() {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setTitle("G.I.R.S. Review Entry");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

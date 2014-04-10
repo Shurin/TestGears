@@ -55,6 +55,8 @@ public class SearchProductID extends JFrame {
 	 * Create the frame.
 	 */
 	public SearchProductID(String result) {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 685, 411);
 		contentPane = new JPanel();

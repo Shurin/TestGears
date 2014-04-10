@@ -49,6 +49,8 @@ public class Search extends JDialog {
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Search() {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setTitle("Search");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());

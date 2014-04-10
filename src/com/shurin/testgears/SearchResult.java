@@ -41,6 +41,8 @@ public class SearchResult extends JDialog {
 	 * Create the dialog.
 	 */
 	public SearchResult(final String search) {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(SystemColor.activeCaption);
