@@ -19,8 +19,7 @@ public class LoginTest extends JDialog {
 	private static final long serialVersionUID = 1L;
 
 	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textField, textField_1;
 
 	/**
 	 * Launch the application.
@@ -100,8 +99,7 @@ public class LoginTest extends JDialog {
 				cancelButton.setActionCommand("Cancel");
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						System.out.println("Cancel");
-						// What action do you want to add in each button?
+						System.exit(0);
 					}
 				});
 				buttonPane.add(cancelButton);
