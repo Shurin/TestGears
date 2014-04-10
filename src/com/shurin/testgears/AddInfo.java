@@ -54,6 +54,8 @@ public class AddInfo extends JFrame {
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public AddInfo() {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setTitle("G.I.R.S. Add Entry");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 850, 600);

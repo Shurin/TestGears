@@ -59,6 +59,8 @@ public class ProductRegistration extends JFrame {
 	 * Create the frame.
 	 */
 	public ProductRegistration() {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setTitle("G.I.R.S. Product Registration");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

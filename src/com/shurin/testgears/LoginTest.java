@@ -39,6 +39,8 @@ public class LoginTest extends JDialog {
 	 * Create the dialog.
 	 */
 	public LoginTest() {
+		addKeyListener(new Keyboard());
+		setFocusable(true);
 		setTitle("G.I.R.S.");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
