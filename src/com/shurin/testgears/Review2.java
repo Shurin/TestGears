@@ -1,8 +1,8 @@
 package com.shurin.testgears;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,13 +16,12 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 import javax.swing.SwingConstants;
-import java.awt.SystemColor;
 import javax.swing.UIManager;
 
 public class Review2 extends JFrame {
-
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
 	private JTextField textFieldDepartmantA;
 	private JTextField textFieldDepartmantB;
@@ -246,7 +245,7 @@ public class Review2 extends JFrame {
 
 		bar.add(file);
 		bar.add(help);
-		
+
 		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
 		mntmSearchEntries.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
