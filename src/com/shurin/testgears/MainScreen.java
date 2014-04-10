@@ -1,6 +1,5 @@
 package com.shurin.testgears;
 
-import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
@@ -9,18 +8,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
 
 public class MainScreen extends JFrame implements KeyListener {
+	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;
 	private JTextField txtJdoe;
@@ -53,7 +53,6 @@ public class MainScreen extends JFrame implements KeyListener {
 		setBounds(100, 100, 450, 405);
 		setResizable(false);
 		contentPane = new JPanel();
-		Color myColor = new Color(10, 10, 10, 10);
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(UIManager.getBorder("DesktopIcon.border"));
 		setUndecorated(true);
@@ -65,22 +64,22 @@ public class MainScreen extends JFrame implements KeyListener {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel.setBounds(129, 110, 238, 61);
 		contentPane.add(lblNewLabel);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Username:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNewLabel_1.setBounds(20, 166, 115, 29);
 		contentPane.add(lblNewLabel_1);
-		
+
 		JLabel lblAccessLevel = new JLabel("Access Level:");
 		lblAccessLevel.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAccessLevel.setBounds(20, 195, 115, 29);
 		contentPane.add(lblAccessLevel);
-		
+
 		JLabel lblAccessType = new JLabel("Access Type:");
 		lblAccessType.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAccessType.setBounds(20, 224, 115, 29);
 		contentPane.add(lblAccessType);
-		
+
 		txtJdoe = new JTextField();
 		txtJdoe.setEditable(false);
 		txtJdoe.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -88,7 +87,7 @@ public class MainScreen extends JFrame implements KeyListener {
 		txtJdoe.setBounds(129, 172, 79, 20);
 		contentPane.add(txtJdoe);
 		txtJdoe.setColumns(10);
-		
+
 		textField = new JTextField();
 		textField.setText("01");
 		textField.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -96,7 +95,7 @@ public class MainScreen extends JFrame implements KeyListener {
 		textField.setColumns(10);
 		textField.setBounds(129, 200, 27, 20);
 		contentPane.add(textField);
-		
+
 		txtPersonProduct = new JTextField();
 		txtPersonProduct.setText("Person & Product Registration");
 		txtPersonProduct.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -104,7 +103,7 @@ public class MainScreen extends JFrame implements KeyListener {
 		txtPersonProduct.setColumns(10);
 		txtPersonProduct.setBounds(129, 230, 178, 20);
 		contentPane.add(txtPersonProduct);
-		
+
 		JLabel label_1 = new JLabel("");
 		label_1.setIcon(new ImageIcon(MainScreen.class.getResource("/com/shurin/testgears/new girs2.jpg")));
 		label_1.setBounds(133, 11, 231, 105);
@@ -178,9 +177,6 @@ public class MainScreen extends JFrame implements KeyListener {
 			}
 		});
 		file.add(mntmReviewNewProduct);
-
-		JLabel label = new JLabel("New label");
-		// contentPane.setViewportView(label);
 	}
 
 	public void keyPressed(KeyEvent key) {
