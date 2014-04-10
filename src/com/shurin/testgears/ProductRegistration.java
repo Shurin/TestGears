@@ -201,6 +201,24 @@ public class ProductRegistration extends JFrame {
 		JButton btnCancel = new JButton("Reset");
 		btnCancel.setFont(new Font("Eras Demi ITC", Font.PLAIN, 12));
 		btnCancel.setBounds(685, 516, 89, 23);
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_3.setText("");
+				textField_4.setText("");
+				textField_5.setText("");
+				textField_6.setText("");
+				textField_7.setText("");
+				textField_8.setText("");
+				textField_9.setText("");
+				textField_10.setText("");
+				textField_11.setText("");
+				textField_12.setText("");
+				textField_13.setText("");
+			}
+		});
 		contentPane.add(btnCancel);
 
 		JButton btnAccept = new JButton("Add Entry");
