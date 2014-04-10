@@ -3,15 +3,10 @@ package com.shurin.testgears;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -21,9 +16,7 @@ public class MainScreen extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;
-	private JTextField txtJdoe;
-	private JTextField textField;
-	private JTextField txtPersonProduct;
+	private JTextField txtJdoe, textField, txtPersonProduct;
 
 	/**
 	 * Launch the application.
@@ -110,73 +103,7 @@ public class MainScreen extends JFrame {
 		contentPane.add(label_1);
 		setLocationRelativeTo(null);
 
-		JMenuBar bar = new JMenuBar();
-		bar.setBorder(UIManager.getBorder("DesktopIcon.border"));
-		setJMenuBar(bar);
-
-		JMenu file = new JMenu("File");
-		file.setMnemonic('F');
-		JMenu help = new JMenu("Search");
-		help.setMnemonic('S');
-
-		bar.add(file);
-		bar.add(help);
-
-		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
-		mntmSearchEntries.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				Search.main(null);
-			}
-		});
-		help.add(mntmSearchEntries);
-
-		JMenuItem login = new JMenuItem("Back to Login");
-		login.setMnemonic('L');
-		login.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				LoginTest.main(null);
-			}
-		});
-
-		file.add(login);
-
-		JMenuItem mntmOpenAddinfo = new JMenuItem("Add New Person");
-		mntmOpenAddinfo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setVisible(false);
-				AddInfo.main(null);
-			}
-		});
-		file.add(mntmOpenAddinfo);
-
-		JMenuItem mntmOpenProductregistration = new JMenuItem("Add New Product");
-		mntmOpenProductregistration.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				ProductRegistration.main(null);
-			}
-		});
-
-		JMenuItem mntmReviewNewPerson = new JMenuItem("Review New Person");
-		mntmReviewNewPerson.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setVisible(false);
-				Review1.main(null);
-			}
-		});
-		file.add(mntmReviewNewPerson);
-		file.add(mntmOpenProductregistration);
-
-		JMenuItem mntmReviewNewProduct = new JMenuItem("Review New Product");
-		mntmReviewNewProduct.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				Review2.main(null);
-			}
-		});
-		file.add(mntmReviewNewProduct);
+		new TopMenu(this);
 	}
 
 }
