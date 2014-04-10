@@ -18,14 +18,15 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 import javax.swing.UIManager;
 
 public class Search extends JDialog {
+	private static final long serialVersionUID = 1L;
 
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
 	JLabel lblTypeDetails, lblPickType;
+	@SuppressWarnings("rawtypes")
 	JComboBox comboBox;
 	public static List<String> data = new ArrayList<String>();
 
@@ -46,6 +47,7 @@ public class Search extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Search() {
 		setTitle("Search");
 		setBounds(100, 100, 450, 300);
