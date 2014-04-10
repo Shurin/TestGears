@@ -2,6 +2,7 @@ package com.shurin.testgears;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,12 +17,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
 import javax.swing.UIManager;
-import java.awt.SystemColor;
 
 public class Review1 extends JFrame {
-
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
 	private JTextField textFieldFirstName;
 	private JTextField textFieldLastName;
@@ -307,7 +307,7 @@ public class Review1 extends JFrame {
 							// Save
 							JOptionPane.showMessageDialog(null, "Entry #A726446819 added to the mainframe.", "Entry Made", 1);
 							ClearFields();
-						} 
+						}
 						if (i == 1) {
 							ClearFields();
 							// Save
@@ -345,7 +345,7 @@ public class Review1 extends JFrame {
 
 		bar.add(file);
 		bar.add(help);
-		
+
 		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
 		mntmSearchEntries.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
