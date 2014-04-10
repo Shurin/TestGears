@@ -2,6 +2,7 @@ package com.shurin.testgears;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,12 +18,11 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
-import java.awt.SystemColor;
 
 public class AddInfo extends JFrame {
+	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;
 	private JTextField textFieldFirstName;
@@ -52,6 +52,7 @@ public class AddInfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public AddInfo() {
 		setTitle("G.I.R.S. Add Entry");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -215,7 +216,7 @@ public class AddInfo extends JFrame {
 
 		bar.add(file);
 		bar.add(help);
-		
+
 		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
 		mntmSearchEntries.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -252,7 +253,7 @@ public class AddInfo extends JFrame {
 				ProductRegistration.main(null);
 			}
 		});
-		
+
 		JMenuItem mntmReviewNewPerson = new JMenuItem("Review New Person");
 		mntmReviewNewPerson.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -262,7 +263,7 @@ public class AddInfo extends JFrame {
 		});
 		file.add(mntmReviewNewPerson);
 		file.add(mntmOpenProductregistration);
-		
+
 		JMenuItem mntmReviewNewProduct = new JMenuItem("Review New Product");
 		mntmReviewNewProduct.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
