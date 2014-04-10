@@ -24,6 +24,7 @@ public class Review2 extends JFrame {
 	private JButton btnAccept;
 
 	public void ClearFields() {
+		btnAccept.setText("Check");
 		textFieldDepartmantA.setText("");
 		textFieldDepartmantB.setText("");
 		textFieldDapartmentC.setText("");
@@ -124,6 +125,12 @@ public class Review2 extends JFrame {
 		JButton btnCancel = new JButton("Cancel");
 		btnCancel.setFont(new Font("Eras Demi ITC", Font.PLAIN, 12));
 		btnCancel.setBounds(658, 266, 89, 23);
+		btnCancel.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ClearFields();
+			}
+		});
 		contentPane.add(btnCancel);
 
 		btnAccept = new JButton("Check");
