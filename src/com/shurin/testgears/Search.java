@@ -122,6 +122,12 @@ public class Search extends JDialog {
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setBackground(SystemColor.activeCaption);
 				cancelButton.setActionCommand("Cancel");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						MainScreen.main(null);
+						dispose();
+					}
+				});
 				buttonPane.add(cancelButton);
 			}
 		}
