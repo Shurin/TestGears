@@ -10,9 +10,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -21,23 +18,9 @@ import javax.swing.UIManager;
 
 public class ProductRegistration extends JFrame {
 	private static final long serialVersionUID = 1L;
-	
+
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField txtFbsbv;
+	private JTextField textField, textField_1, textField_2, textField_3, textField_4, textField_5, textField_6, textField_7, textField_8, textField_9, textField_10, textField_11, textField_12, textField_13, txtFbsbv;
 
 	/**
 	 * Launch the application.
@@ -73,8 +56,7 @@ public class ProductRegistration extends JFrame {
 		setLocationRelativeTo(null);
 
 		JLabel image = new JLabel("");
-		image.setIcon(new ImageIcon(AddInfo.class
-				.getResource("/com/shurin/testgears/new girs2.jpg")));
+		image.setIcon(new ImageIcon(AddInfo.class.getResource("/com/shurin/testgears/new girs2.jpg")));
 		image.setBounds(301, 50, 231, 105);
 		contentPane.add(image);
 
@@ -231,73 +213,7 @@ public class ProductRegistration extends JFrame {
 		btnAccept.setBounds(589, 516, 89, 23);
 		contentPane.add(btnAccept);
 
-		JMenuBar bar = new JMenuBar();
-		bar.setBorder(UIManager.getBorder("DesktopIcon.border"));
-		setJMenuBar(bar);
-
-		JMenu file = new JMenu("File");
-		file.setMnemonic('F');
-		JMenu help = new JMenu("Search");
-		help.setMnemonic('S');
-
-		bar.add(file);
-		bar.add(help);
-		
-		JMenuItem mntmSearchEntries = new JMenuItem("Search Entries");
-		mntmSearchEntries.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				Search.main(null);
-			}
-		});
-		help.add(mntmSearchEntries);
-
-		JMenuItem login = new JMenuItem("Back to Login");
-		login.setMnemonic('L');
-		login.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				LoginTest.main(null);
-			}
-		});
-
-		file.add(login);
-
-		JMenuItem mntmOpenAddinfo = new JMenuItem("Add New Person");
-		mntmOpenAddinfo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setVisible(false);
-				AddInfo.main(null);
-			}
-		});
-		file.add(mntmOpenAddinfo);
-
-		JMenuItem mntmOpenProductregistration = new JMenuItem("Add New Product");
-		mntmOpenProductregistration.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				ProductRegistration.main(null);
-			}
-		});
-		
-		JMenuItem mntmReviewNewPerson = new JMenuItem("Review New Person");
-		mntmReviewNewPerson.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setVisible(false);
-				Review1.main(null);
-			}
-		});
-		file.add(mntmReviewNewPerson);
-		file.add(mntmOpenProductregistration);
-		
-		JMenuItem mntmReviewNewProduct = new JMenuItem("Review New Product");
-		mntmReviewNewProduct.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				Review2.main(null);
-			}
-		});
-		file.add(mntmReviewNewProduct);
+		new TopMenu(this);
 	}
 
 }
