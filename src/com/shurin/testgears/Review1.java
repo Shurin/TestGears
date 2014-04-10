@@ -256,7 +256,7 @@ public class Review1 extends JFrame {
 		JButton btnCancel = new JButton("Reset");
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				ClearFields();
 			}
 		});
 		btnCancel.setFont(new Font("Eras Demi ITC", Font.PLAIN, 12));
